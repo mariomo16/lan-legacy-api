@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
-            $table->enum('range', ['low', 'medium', 'high']);
+            $table->enum('range', ['standard', 'pro']);
             $table->decimal('price_per_hour', 5, 2);
             $table->text('specs');
             $table->string('status')->default('avaible');
