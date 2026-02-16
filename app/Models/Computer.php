@@ -9,4 +9,9 @@ class Computer extends Model
 {
     /** @use HasFactory<\Database\Factories\ComputerFactory> */
     use HasFactory;
+
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }

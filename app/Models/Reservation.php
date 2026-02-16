@@ -9,4 +9,14 @@ class Reservation extends Model
 {
     /** @use HasFactory<\Database\Factories\ReservationFactory> */
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function computer()
+    {
+        return $this->belongsTo(Computer::class);
+    }
 }
