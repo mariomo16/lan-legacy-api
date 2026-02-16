@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('code')->unique();
             $table->enum('range', ['standard', 'pro']);
-            $table->decimal('price_per_hour', 5, 2);
+            $table->decimal('price_per_hour', 4, 2);
             $table->text('specs');
             $table->string('status')->default('avaible');
             $table->timestamps();

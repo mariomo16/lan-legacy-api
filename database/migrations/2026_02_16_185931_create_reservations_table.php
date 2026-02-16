@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->foreignIdFor(Computer::class)->constrained()->cascadeOnDelete();
             $table->dateTime('start_time');
             $table->dateTime('end_time');
-            $table->decimal('total_price', 8, 2);
+            $table->decimal('total_price', 6, 2);
             $table->string('status')->default('confirmed');
             $table->timestamps();
         });
